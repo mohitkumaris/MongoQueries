@@ -4,7 +4,8 @@ const Schema=mongoose.Schema;
 
 
 var userSchema= new Schema({
-    name:String
+    name:String,
+    createdAt:Date
 });
 
 var User=mongoose.model('user',userSchema);

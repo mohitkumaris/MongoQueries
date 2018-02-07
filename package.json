@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bluebird": "^3.5.1",
+
     "mongoose": "^4.5.9"
   },
   "devDependencies": {
