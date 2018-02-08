@@ -12,7 +12,7 @@ function find(operation,name) {
 
 describe('Updating the records',()=>{
 
-    it('update the record findOneandUpdate',()=>{
+   /* it('update the record findOneandUpdate',()=>{
 
         let query={name:'Joe'};
         let newname='Mike';
@@ -28,6 +28,17 @@ describe('Updating the records',()=>{
         joe.set({name:newname});
 
         find(joe.save(),newname);
+
+    }); */
+
+    it('Increment post count',()=>{
+           // multiple documents
+        User.update({name:'Joe'},{$inc:{postCount:10}},{multi:true})
+            .then((user)=>{
+
+                console.log(user);
+
+            });
 
     });
 
