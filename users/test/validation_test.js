@@ -16,7 +16,7 @@ describe('Validating the records',()=> {
 
     it('requires a user name to be of length more than 2',()=>{
 
-        const joe = new User({name:'Sa',createdAt:new Date(),postCount:1});
+        const joe = new User({name:'Sam mark',createdAt:new Date(),postCount:1});
         let validateMessage=joe.validateSync();
         if(validateMessage)
             console.log(validateMessage.errors.name.message);
