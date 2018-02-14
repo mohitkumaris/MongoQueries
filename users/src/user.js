@@ -23,8 +23,15 @@ name:{
     }
 },
     createdAt:Date,
-    postCount:Number,
+   // postCount:Number,
     posts:[postSchema],
+
+});
+
+// Creating virtual type to get value on the fly.
+userSchema.virtual('postCount').get(function () {
+
+  return this.posts.length;
 
 });
 
