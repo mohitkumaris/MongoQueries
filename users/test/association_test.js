@@ -31,7 +31,7 @@ describe('Associations',()=>{
 
   it('Retrieve associated documents',()=>{
 
-       User.findOne({name:'Mohit'},{_id:0,__v:0})
+       User.findOne({_id:'5a85b7f5e1c1eb184f134d4e'},{_id:0,__v:0})
          .populate({
            path:'blogPosts',
            populate:{

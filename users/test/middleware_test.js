@@ -19,7 +19,7 @@ describe('Using middleware',()=>{
 
   });
 
-  it.only('remove blogpost from User blog',()=>{
+  it('remove blogpost from User blog',()=>{
 
        User.update({_id:'5a859c07af55c80c526a9bca'},{$pull:{blogPosts:'5a859c07af55c80c526a9bcb'}},
          {new:true})
@@ -28,6 +28,16 @@ describe('Using middleware',()=>{
            console.log(user);
 
          });
+
+  });
+
+  it('remove comment of particular user',()=>{
+
+    BlogPost.update({_id:'5a85b7f5e1c1eb184f134d4f'},{$pull:{comments:'5a85b7f5e1c1eb184f134d50'}},
+      {new:true})
+      .then((blog)=>{
+        console.log(blog);
+      });
 
   });
 
