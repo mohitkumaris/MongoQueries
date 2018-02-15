@@ -1,5 +1,5 @@
-const mongoose=require('mongoose');
-const Schema=mongoose.Schema;
+const {Schema}=require('./Schema');
+const {mongoose}=require('./Schema')
 
 var postSchema= new Schema({
     title:String
@@ -25,6 +25,10 @@ name:{
     createdAt:Date,
    // postCount:Number,
     posts:[postSchema],
+    blogPosts:[{
+       type:Schema.Types.ObjectId,
+      ref:'blogPost'
+    }]
 
 });
 
