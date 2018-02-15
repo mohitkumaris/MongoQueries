@@ -21,7 +21,7 @@ describe('Using middleware',()=>{
 
   it('remove blogpost from User blog',()=>{
 
-       User.update({_id:'5a859c07af55c80c526a9bca'},{$pull:{blogPosts:'5a859c07af55c80c526a9bcb'}},
+       User.findByIdAndUpdate({_id:'5a85c06a4e5912b43d42c7ef'},{$pull:{blogPosts:'5a85c06a4e5912b43d42c7f0'}},
          {new:true})
          .then((user)=>{
 

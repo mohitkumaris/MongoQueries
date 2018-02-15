@@ -8,7 +8,7 @@ describe('Associations',()=>{
 
   it('check the association',()=>{
 
-    const userblog=new User({name:'Mohit'});
+    const userblog=new User({name:'Mohit Kumar'});
     const blog=new BlogPost({title:'new Blog on JS',content:'Nice content'});
     const comment= new Comment({content:'yes its great'});
 
@@ -31,7 +31,7 @@ describe('Associations',()=>{
 
   it('Retrieve associated documents',()=>{
 
-       User.findOne({_id:'5a85b7f5e1c1eb184f134d4e'},{_id:0,__v:0})
+       User.findOne({name:'Mohit Kumar'},{_id:0,__v:0})
          .populate({
            path:'blogPosts',
            populate:{
