@@ -39,6 +39,10 @@ userSchema.virtual('postCount').get(function () {
 
 });
 
+// Mongoose middleware
+
+
+
 var User=mongoose.model('user',userSchema);
 
 //=>name.length>2
