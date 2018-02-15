@@ -18,4 +18,14 @@ describe('Fetching the users',()=>{
 
    });
 
+   it('can skip and limit the results',()=>{
+
+     User.find({}).skip(2).limit(20).then((users)=>{
+
+       console.log(users.length)
+     });
+
+
+   });
+
 });
