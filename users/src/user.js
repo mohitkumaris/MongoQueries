@@ -41,7 +41,17 @@ userSchema.virtual('postCount').get(function () {
 
 // Mongoose middleware
 
+userSchema.pre('remove',(next)=>{
+ const blogPost=mongoose.model('blogPost');
 
+ // this is instance of user
+
+   blogPost.remove({_id:{$in:this.blogPosts}}).
+    then(()=>{
+      next();
+   });
+
+});
 
 var User=mongoose.model('user',userSchema);
 

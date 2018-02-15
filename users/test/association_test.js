@@ -29,7 +29,7 @@ describe('Associations',()=>{
 
   });
 
-  it.only('Retrieve associated documents',()=>{
+  it('Retrieve associated documents',()=>{
 
        User.findOne({name:'Mohit'},{_id:0,__v:0})
          .populate({
